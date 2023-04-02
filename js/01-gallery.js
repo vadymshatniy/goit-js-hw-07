@@ -66,11 +66,10 @@ const galleryItems = [
 // Change code below this line
 
 const galleryGrid = document.querySelector(".gallery");
-galleryGrid.style.display = "flex";
 
 const pictureItems = galleryItems.map((galleryItem) => {
   const listItem = document.createElement('li');
-  listItem.innerHTML = `<img src = "${galleryItem.preview}" alt = "${galleryItem.description}"></img>`;
+  listItem.innerHTML = `<img class = "gallery_image" src = "${galleryItem.preview}" alt = "${galleryItem.description}"></img>`;
   return listItem;
 });
 
