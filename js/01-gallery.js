@@ -69,7 +69,15 @@ const galleryGrid = document.querySelector(".gallery");
 
 const pictureItems = galleryItems.map((galleryItem) => {
   const listItem = document.createElement('li');
-  listItem.innerHTML = `<img class = "gallery_image" src = "${galleryItem.preview}" alt = "${galleryItem.description}"></img>`;
+  listItem.classList.add("gallery__item");
+  listItem.innerHTML = `<a class="gallery__link" href="${galleryItem.original}">
+    <img
+      class="gallery__image"
+      src="${galleryItem.preview}"
+      data-source="${galleryItem.original}"
+      alt="${galleryItem.description}"
+    />
+  </a>`;
   return listItem;
 });
 
