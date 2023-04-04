@@ -64,7 +64,7 @@ const galleryItems = [
   },
 ];
 // Change code below this line
-import * as basicLightbox from 'basiclightbox'
+// import * as basicLightbox from 'basiclightbox'
 
 const galleryGrid = document.querySelector(".gallery");
 
