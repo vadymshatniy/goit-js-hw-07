@@ -83,4 +83,26 @@ const pictureItems = galleryItems.map((galleryItem) => {
 
 galleryGrid.append(...pictureItems);
 
+import * as basicLightbox from 'basiclightbox'
 
+galleryGrid.addEventListener("click", showBigImage);
+function showBigImage(evt) {
+  if (!evt.target.classList.contains("gallery__image")) {
+    return;
+  }
+
+  const instance = basicLightbox.create(`
+    <img src="evt.target.dataset.source">`)
+
+  instance.show()
+
+  // const selectedImage = evt.target.dataset.source;
+}
+
+// import * as basicLightbox from 'basiclightbox'
+
+// const instance = basicLightbox.create(`
+//     <img src="assets/images/image.png" width="800" height="600">
+// `)
+
+// instance.show()
