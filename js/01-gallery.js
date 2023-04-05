@@ -91,7 +91,7 @@ function showBigImage(evt) {
   }
 
   const instance = basicLightbox.create(`
-    <img src="evt.target.dataset.source">`)
+    <img src="${evt.target.dataset.source}">`)
   instance.show()
 }
 
